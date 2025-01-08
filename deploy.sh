@@ -30,7 +30,7 @@ LOCAL_DIR="public" # 脚本同级目录下的 public
 
 # 上传文件到远程并覆盖
 echo "正在上传 public 目录下的所有文件到 $REMOTE_HOST:$REMOTE_DIR..."
-rsync -aqh --progress --delete \
+rsync -azqhP --progress --delete \
   --exclude '.DS_Store' \
   --exclude '._*' \
   --exclude '__MACOSX' \
