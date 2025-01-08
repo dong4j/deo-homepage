@@ -23,7 +23,7 @@ COMMIT_MESSAGE=${3:-"更新页面"}
 # 执行 Git 操作
 git add .
 git commit -m "$COMMIT_MESSAGE"
-git push -u github main
+git push -u origin main
 
 # 定义本地目录
 LOCAL_DIR="public" # 脚本同级目录下的 public
