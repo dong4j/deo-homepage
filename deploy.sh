@@ -16,15 +16,6 @@ fi
 REMOTE_HOST="$1"
 REMOTE_DIR="$2"
 
-
-# 使用第3个参数作为提交信息，如果未提供参数，则使用默认信息
-COMMIT_MESSAGE=${3:-"更新页面"}
-
-# 执行 Git 操作
-git add .
-git commit -m "$COMMIT_MESSAGE"
-git push -u origin main
-
 # 定义本地目录
 LOCAL_DIR="public" # 脚本同级目录下的 public
 
