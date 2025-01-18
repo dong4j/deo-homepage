@@ -16,6 +16,13 @@ fi
 REMOTE_HOST="$1"
 REMOTE_DIR="$2"
 
+# 检查并创建远程目录
+ssh "$REMOTE_HOST" "mkdir -p '$REMOTE_DIR'"
+if [ $? -ne 0 ]; then
+  echo "无法创建远程目录，请检查连接或权限配置。"
+  exit 1
+fi
+
 # 定义本地目录
 LOCAL_DIR="public" # 脚本同级目录下的 public
 
